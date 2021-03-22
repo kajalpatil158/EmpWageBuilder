@@ -1,6 +1,6 @@
 package empwagebuilder;
 import java.util.Random;
-public class EmpWageBuilderUC2
+public class EmpWageBuilderUC
 {
 	public static void main(String[] args)	
 	{
@@ -8,6 +8,7 @@ public class EmpWageBuilderUC2
 		int IS_FULL_TIME = 1;
 		int IS_PART_TIME = 2;
 		int Wage_Per_Hr=20;
+		int WORKING_DAYS_FOR_MONTH=20;
 		//Veriables
 		int emp_hr;
 		//Computation
@@ -29,7 +30,10 @@ public class EmpWageBuilderUC2
 				break;
 		}
 		int Wage = (emp_hr) * (Wage_Per_Hr);
+		int Total_Wages=(emp_hr) * (Wage_Per_Hr)*(WORKING_DAYS_FOR_MONTH);
 		System.out.println("Employee wages per hr is = "+Wage);
+		System.out.println("Employee wages for month is = "+Total_Wages);
+		
 	}
 
 
