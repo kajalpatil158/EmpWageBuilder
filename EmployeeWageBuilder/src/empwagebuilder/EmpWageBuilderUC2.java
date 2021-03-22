@@ -1,5 +1,5 @@
 package empwagebuilder;
-
+import java.util.Random;
 public class EmpWageBuilderUC2
 {
 	public static void main(String[] args)	
@@ -11,26 +11,25 @@ public class EmpWageBuilderUC2
 		//Veriables
 		int emp_hr;
 		//Computation
-		double empCheck = (int)Math.floor(Math.random()*10);
-		if (empCheck == IS_FULL_TIME)
+		Random rand=new Random();
+		int empCheck =rand.nextInt(3);
+		switch (empCheck)
 		{
-			emp_hr=8;
-			System.out.println("Employee is Present");
-		}
-		else if(empCheck == IS_PART_TIME)
-		{
-			emp_hr=4;
-			System.out.println("Employee is Part Time");
-		}
-		else
-		{
-			emp_hr=0;
-			System.out.println("Employee is Absent");
-			
+		case  1:
+				emp_hr=8;
+				System.out.println("Employee is Present");
+				break;
+		case 2:
+				emp_hr=4;
+				System.out.println("Employee is Part Time");
+				break;
+		default:
+				emp_hr=0;
+				System.out.println("Employee is Absent");
+				break;
 		}
 		int Wage = (emp_hr) * (Wage_Per_Hr);
 		System.out.println("Employee wages per hr is = "+Wage);
-		//System.out.println(Wage);
 	}
 
 
